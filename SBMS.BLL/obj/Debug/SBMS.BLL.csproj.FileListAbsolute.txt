@@ -1,0 +1,17 @@
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.BLL.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.BLL.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\obj\Debug\SBMS.BLL.csproj.CoreCompileInputs.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\obj\Debug\SBMS.BLL.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\obj\Debug\SBMS.BLL.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.Models.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.Repository.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.DatabaseContext.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\EntityFramework.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.Models.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.Repository.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.Repository.dll.config
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.DatabaseContext.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\SBMS.DatabaseContext.dll.config
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\bin\Debug\EntityFramework.xml
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\obj\Debug\SBMS.BLL.csprojAssemblyReference.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.BLL\obj\Debug\SBMS.BLL.csproj.CopyComplete

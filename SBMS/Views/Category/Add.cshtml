@@ -1,0 +1,22 @@
+﻿@model SBMS.Models.Models.Category
+@{
+    Layout ="~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+
+    <div>
+        @using (Html.BeginForm("Add", "Category"))
+        {
+            @Html.LabelFor(c => c.Code, null, new { })
+            @Html.TextBoxFor(c => c.Code, "Enter category code", new { })
+
+            @Html.LabelFor(c => c.Name, null, new { })
+            @Html.TextBoxFor(c => c.Name, "Enter category code", new { })
+
+        <input type="submit" name="Add" value="Submit" />
+        }
+
+    </div>
+
