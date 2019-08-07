@@ -1,3 +1,6 @@
+using AutoMapper;
+using SBMS.Models;
+using SBMS.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +16,15 @@ namespace SBMS
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ConfigureAutomapper();
+        }
+        public void ConfigureAutomapper()
+        {
+            Mapper.Initialize(conf =>
+            {
+                conf.CreateMap<CategoryAddVM, Category>();
+                conf.CreateMap<Category, CategoryAddVM>();
+            });
         }
     }
 }

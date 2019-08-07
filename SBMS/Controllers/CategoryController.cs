@@ -1,4 +1,6 @@
-﻿using SBMS.BLL.BLL;
+﻿using AutoMapper;
+using SBMS.BLL.BLL;
+using SBMS.Models;
 using SBMS.Models.Models;
 using System;
 using System.Collections.Generic;
@@ -18,14 +20,27 @@ namespace SBMS.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Category category)
+        public ActionResult Add(CategoryAddVM categoryAddVM)
         {
-            Category categoryAdd = new Category();
-            categoryAdd.Code = category.Code;
-            categoryAdd.Name = category.Name;
-            var status= _categoryManager.Add(categoryAdd);
+                        
+            var category = Mapper.Map<Category>(categoryAddVM);
+            if (ModelState.IsValid)
+            {
+                if (_categoryManager.Add(category))
+                {
+                    ViewBag.SuccessMsg="Saved!!!";   
+                }
+                else
+                {
+                    ViewBag.FailedMsg="Faield!!!";
+                }
+            }else
+            {
+                ViewBag.ValidationMsg="Validation Failed!!!";
+            }
             
-            return View(categoryAdd);
+            
+            return View(categoryAddVM);
         }
     }
 }
