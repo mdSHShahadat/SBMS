@@ -14,3 +14,19 @@ D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBM
 D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.pdb
 D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.Migrations.Initial.resources
 D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.GenerateResource.cache
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.DatabaseContext.dll.config
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.DatabaseContext.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.DatabaseContext.pdb
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.Models.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.Models.pdb
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.xml
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csprojAssemblyReference.cache
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.Migrations.Initial.resources
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.GenerateResource.cache
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.CoreCompileInputs.cache
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.CopyComplete
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.pdb

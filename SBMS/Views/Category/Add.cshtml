@@ -3,40 +3,60 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-<div>
-    @if (ViewBag.SuccessMsg != null)
-    {
-        <h1>@ViewBag.SuccessMsg</h1>
-    }
-    @if (ViewBag.FailedMsg != null)
-    {
-        <h1>@ViewBag.FailedMsg</h1>
-    }
-    @if (ViewBag.ValidationMsg != null)
-    {
-        <h1>@ViewBag.ValidationMsg</h1>
-    }
-</div>
+<div id="categorySetup" class="container text-center">
+    <h3>Product Category Setup</h3>    
+        <div>
+            @if (ViewBag.SuccessMsg != null)
+            {
+                <h1>@ViewBag.SuccessMsg</h1>
+            }
+            @if (ViewBag.FailedMsg != null)
+            {
+                <h1>@ViewBag.FailedMsg</h1>
+            }
+            @if (ViewBag.ValidationMsg != null)
+            {
+                <h1>@ViewBag.ValidationMsg</h1>
+            }
+        </div>
 
 
-<div>
+    <div>
     @using (Html.BeginForm("Add", "Category"))
     {
-        @Html.LabelFor(c => c.Code, null, new { })
-        @Html.TextBoxFor(c => c.Code, "Enter category code", new { })
-       // @Html.ValidationMessageFor(c => c.Code,null,new {@class="text-danger"})
+        
+        
+           
+        <div class="row">
+            <br/>
 
-        @Html.LabelFor(c => c.Name, null, new { })
-        @Html.TextBoxFor(c => c.Name, "Enter category code", new { })
-       // @Html.ValidationMessageFor(c => c.Name)
+            <div class="col-md-3" style="background: aquamarine"></div>
+            <div class="col-md-3" style="background: black">
+                <div class="row">
+                    <div class="col-sm-2">@Html.LabelFor(c => c.Code, null, new { })</div>
+                    <div class="col-sm-4">@Html.TextBoxFor(c => c.Code, "Enter category code", new { })</div>
+                    @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">@Html.LabelFor(c => c.Name, null, new { })</div>
+                    <div class="col-sm-4">@Html.TextBoxFor(c => c.Name, "Enter category code", new { })</div>
+                    @Html.ValidationMessageFor(c => c.Name)
+                </div>
+                <div class="row" style="background: aqua">
+                    <input type="submit" name="Add" value="Submit"/>
+                </div>
+            </div>
+            <div class="col-md-3" style="background: aquamarine"></div>
 
-        <input type="submit" name="Add" value="Submit" />
+        </div>
+
     }
 
+    </div>
 </div>
-@*@section Scripts{
+@section Scripts{
 
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 
-}*@
+}

@@ -15,3 +15,20 @@ D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBM
 D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\EntityFramework.xml
 D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\EntityFramework.SqlServer.xml
 D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\Project_SBMS\SBMS\SBMS.Repository\obj\Debug\SBMS.Repository.csproj.CopyComplete
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.Repository.dll.config
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.Repository.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.Repository.pdb
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.DatabaseContext.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.Models.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.DatabaseContext.pdb
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.DatabaseContext.dll.config
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\SBMS.Models.pdb
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\obj\Debug\SBMS.Repository.csprojAssemblyReference.cache
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\obj\Debug\SBMS.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\obj\Debug\SBMS.Repository.csproj.CopyComplete
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\obj\Debug\SBMS.Repository.dll
+C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Repository\obj\Debug\SBMS.Repository.pdb
