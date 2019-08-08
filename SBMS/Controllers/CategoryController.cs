@@ -38,9 +38,16 @@ namespace SBMS.Controllers
             {
                 ViewBag.ValidationMsg="Validation Failed!!!";
             }
-            
-            
+
+
             return View(categoryAddVM);
+        }
+
+        public ActionResult Show()
+        {
+            CategoryAddVM categoryAddVm = new CategoryAddVM();
+            categoryAddVm.Categories = _categoryManager.GetAll();
+            return View(categoryAddVm) ;
         }
     }
 }

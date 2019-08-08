@@ -23,5 +23,10 @@ namespace SBMS.Repository.Repository
             return false;
            
         }
+
+        public List<Category> GetAll()
+        {
+            return db.Categories.ToList();
+        }
     }
 }

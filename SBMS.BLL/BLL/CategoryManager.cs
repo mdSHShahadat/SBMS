@@ -17,5 +17,9 @@ namespace SBMS.BLL.BLL
         {
             return _categoryRepositoy.Add(category);
         }
+        public List<Category> GetAll()
+        {
+            return _categoryRepositoy.GetAll();
+        }
     }
 }

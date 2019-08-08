@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using SBMS.Models.Models;
 
 namespace SBMS.Models
 {
@@ -16,5 +17,7 @@ namespace SBMS.Models
         [Required(ErrorMessage = "Please enter category name!!!")]
         [MaxLength(24)]
         public string Name { get; set; }
+
+        public List<Category> Categories { get; set; }
     }
 }
