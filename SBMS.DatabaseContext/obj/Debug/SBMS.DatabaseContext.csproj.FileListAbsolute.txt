@@ -30,3 +30,19 @@ C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj
 C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.CopyComplete
 C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.dll
 C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.DatabaseContext.dll.config
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.DatabaseContext.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.DatabaseContext.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.Models.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\SBMS.Models.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.xml
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csprojAssemblyReference.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.Migrations.Initial.resources
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.GenerateResource.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.CoreCompileInputs.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.CopyComplete
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.pdb

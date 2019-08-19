@@ -10,3 +10,9 @@ C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Models\obj\Debug\SB
 C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Models\obj\Debug\SBMS.Models.csproj.CoreCompileInputs.cache
 C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Models\obj\Debug\SBMS.Models.dll
 C:\Users\Web App Develop .Net\Desktop\Project_SBMS\SBMS\SBMS.Models\obj\Debug\SBMS.Models.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.Models\bin\Debug\SBMS.Models.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.Models\bin\Debug\SBMS.Models.pdb
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.csprojAssemblyReference.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.csproj.CoreCompileInputs.cache
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.dll
+D:\Enlight Solutions Shahadat\EnlightSolutions\WorkStation\19082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.pdb
