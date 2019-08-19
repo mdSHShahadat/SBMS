@@ -21,5 +21,9 @@ namespace SBMS.BLL.BLL
         {
             return _categoryRepositoy.GetAll();
         }
+        public bool Delete(Category category)
+        {
+            return _categoryRepositoy.Delete(category);
+        }
     }
 }

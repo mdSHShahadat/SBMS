@@ -8,68 +8,69 @@
     
 
     <div>
-    @using (Html.BeginForm("Add", "Category"))
-    {
-        
-        
-           
-        <div class="row">
-            <br />
-            <div class="col-md-12" style="background: black"></div>
-            <div class="col-md-12" style="background: aquamarine"></div>
+        @using (Html.BeginForm("Add", "Category"))
+        {
 
 
-            <div class="col-md-12" style="background:azure">
 
-                <div class="row" style="padding: 1%">
-                    <div class="col-sm-4">@Html.LabelFor(c => c.Code, null, new { @class = "form-group", color = "aquamarine" })</div>
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(c => c.Code, "Enter category code", new { @class = "form-group", style = "width:100%" })
-                        @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
-                    </div>
+            <div class="row">
+                <br />
+                <div class="col-md-12" style="background: black"></div>
+                <div class="col-md-12" style="background: aquamarine"></div>
 
-                </div>
-                <div class="row" style="padding: 1%">
-                    <div class="col-sm-4">@Html.LabelFor(c => c.Name, null, new { @class = "form-group", color = "aquamarine" })</div>
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(c => c.Name, "Enter category code", new { @class = "form-group", style = "width:100%" })
-                        @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
-                    </div>
 
-                </div>
-                <div class="row" style="padding: 1%">
-                    <div class="col-sm-4">
-                       
-                        <div class="col-md-12">
-                            <div>
-                                @if (ViewBag.SuccessMsg != null)
-                                {
-                                    <p style="color: green">@ViewBag.SuccessMsg</p>
-                                }
-                                @if (ViewBag.FailedMsg != null)
-                                {
-                                    <p style="color: red">@ViewBag.FailedMsg</p>
-                                }
-                                @if (ViewBag.ValidationMsg != null)
-                                {
-                                    <p style="color: yellow">@ViewBag.ValidationMsg</p>
-                                }
-                            </div>
+                <div class="col-md-12" style="background:azure">
+
+                    <div class="row" style="padding: 1%">
+                        <div class="col-sm-4">@Html.LabelFor(c => c.Code, null, new { @class = "form-group", color = "aquamarine" })</div>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(c => c.Code, "Enter category code", new { @class = "form-group", style = "width:100%" })
+                            @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                         </div>
-                       
+
                     </div>
-                    <div class="col-sm-8"><input type="submit" name="Add" value="Submit" /> </div>
+                    <div class="row" style="padding: 1%">
+                        <div class="col-sm-4">@Html.LabelFor(c => c.Name, null, new { @class = "form-group", color = "aquamarine" })</div>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(c => c.Name, "Enter category code", new { @class = "form-group", style = "width:100%" })
+                            @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+                        </div>
 
+                    </div>
+                    <div class="row" style="padding: 1%">
+                        <div class="col-sm-4">
+
+                            <div class="col-md-12">
+                                <div>
+                                    @if (ViewBag.SuccessMsg != null)
+                                    {
+                                        <p style="color: green">@ViewBag.SuccessMsg</p>
+                                    }
+                                    @if (ViewBag.FailedMsg != null)
+                                    {
+                                        <p style="color: red">@ViewBag.FailedMsg</p>
+                                    }
+                                    @if (ViewBag.ValidationMsg != null)
+                                    {
+                                        <p style="color: yellow">@ViewBag.ValidationMsg</p>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-8"><input type="submit" name="Add" value="Submit" /> </div>
+
+                    </div>
                 </div>
+                <div class="col-md-12" style="background: black"></div>
+                <div class="col-md-12" style="background: aquamarine"></div>
+
+
             </div>
-            <div class="col-md-12" style="background: black"></div>
-            <div class="col-md-12" style="background: aquamarine"></div>
 
 
-        </div>
+        }
         
-    }
-
     </div>
 </div>
 @section Scripts{

@@ -37,10 +37,8 @@ namespace SBMS.Controllers
             }else
             {
                 ViewBag.ValidationMsg="Validation Failed!!!";
-            }
-
-
-            return View(categoryAddVM);
+            }           
+            return RedirectToAction("Show");
         }
 
         public ActionResult Show()
@@ -49,5 +47,19 @@ namespace SBMS.Controllers
             categoryAddVm.Categories = _categoryManager.GetAll();
             return View(categoryAddVm) ;
         }
+       public ActionResult Edit()
+        {
+            return View();
+        }
+        public ActionResult Delete(CategoryAddVM categoryAddVM)
+        {
+            var category = Mapper.Map<Category>(categoryAddVM);
+            category.Id = categoryAddVM.Id;
+            
+                _categoryManager.Delete(category);
+            
+            return RedirectToAction("Show");
+        }
+        
     }
 }

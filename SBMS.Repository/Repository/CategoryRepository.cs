@@ -28,5 +28,21 @@ namespace SBMS.Repository.Repository
         {
             return db.Categories.ToList();
         }
+        public bool Delete(Category category)
+        {
+            int isExecuted = 0;
+            Category aCategory = db.Categories.FirstOrDefault(c => c.Id == category.Id);
+
+            db.Categories.Remove(aCategory);
+            isExecuted = db.SaveChanges();
+
+            if (isExecuted > 0)
+            {
+                return true;
+            }
+
+
+            return false;
+        }
     }
 }
