@@ -47,19 +47,53 @@ namespace SBMS.Controllers
             categoryAddVm.Categories = _categoryManager.GetAll();
             return View(categoryAddVm) ;
         }
-       public ActionResult Edit()
-        {
-            return View();
-        }
+
         public ActionResult Delete(CategoryAddVM categoryAddVM)
         {
             var category = Mapper.Map<Category>(categoryAddVM);
-            category.Id = categoryAddVM.Id;
-            
-                _categoryManager.Delete(category);
-            
+            //category.Id = categoryAddVM.Id;
+
+            _categoryManager.Delete(category);
+
             return RedirectToAction("Show");
         }
-        
+        [HttpGet]
+        public ActionResult Edit(int Id)
+        {
+            var category = _categoryManager.GetByID(Id);
+            var aCategoryAddVM = Mapper.Map<CategoryAddVM>(category);
+            return View(aCategoryAddVM);
+        }
+        [HttpPost]
+        public ActionResult Edit(CategoryAddVM categoryAddVM)
+        {
+            var category = Mapper.Map<Category>(categoryAddVM);
+            
+            _categoryManager.Update(category);
+            return RedirectToAction("Show");
+        }
+        public ActionResult Search()
+        {
+            CategoryAddVM categoryAddVm = new CategoryAddVM();
+            categoryAddVm.Categories = _categoryManager.GetAll();
+            return View(categoryAddVm);
+        }
+        [HttpPost]
+        public ActionResult Search(CategoryAddVM categoryAddVM)
+        {
+            var category = _categoryManager.GetAll();
+            if (categoryAddVM.Code != null)
+            {
+                category = category.Where(c => c.Code.ToLower().Contains(categoryAddVM.Code.ToLower())).ToList();
+            }
+            if(categoryAddVM.Name != null)
+            {
+                category = category.Where(c => c.Name.ToLower().Contains(categoryAddVM.Name.ToLower())).ToList();
+            }
+            categoryAddVM.Categories = category;
+
+            return View(categoryAddVM);
+        }
+
     }
 }

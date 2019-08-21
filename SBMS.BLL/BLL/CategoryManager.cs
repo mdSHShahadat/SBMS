@@ -25,5 +25,15 @@ namespace SBMS.BLL.BLL
         {
             return _categoryRepositoy.Delete(category);
         }
+        public Category GetByID(int categoryId)
+        {
+
+            return _categoryRepositoy.GetByID(categoryId);
+        }
+
+        public bool Update(Category category)
+        {
+            return _categoryRepositoy.Update(category);
+        }
     }
 }
