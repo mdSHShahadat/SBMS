@@ -24,6 +24,9 @@ namespace SBMS
             {
                 conf.CreateMap<CategoryAddVM, Category>();
                 conf.CreateMap<Category, CategoryAddVM>();
+
+                conf.CreateMap<ProductAddVM, Product>();
+                conf.CreateMap<Product, ProductAddVM>();
             });
         }
     }

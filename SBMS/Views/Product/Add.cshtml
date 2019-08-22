@@ -1,26 +1,26 @@
-﻿@model SBMS.Models.CategoryAddVM
+﻿@model SBMS.Models.ProductAddVM
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
     <div id="categorySetup" class="container text-center">
-        <h3>Category Setup</h3>
+        <h3>Product Setup</h3>
         <br />
         <div class="row">           
             <div class="col-md-12" style="background:azure">
 
                 <div class="row">
                     <div class="col-sm-2" style="padding:1px">
-                        <a href="http://localhost:3706/Category/Search"><input type="button" name="Show" value="Show All Category" /></a>
+                        <a href="http://localhost:3706/Product/Search"><input type="button" name="Show" value="Show All Product" /></a>
                     </div>                   
                 </div>
             </div>            
         </div>
         <div>
-            @using (Html.BeginForm("Add", "Category"))
+            @using (Html.BeginForm("Add", "Product"))
             {
 
-                <div class="row">
+                <div class="row" >
                    
                     <div class="col-md-12" style="background: black"></div>
                     <div class="col-md-12" style="background: aquamarine"></div>
@@ -31,7 +31,7 @@
                         <div class="row" style="padding: 0.5px">
                             <div class="col-sm-4">@Html.LabelFor(c => c.Code, null, new { @class = "form-group", color = "aquamarine" })</div>
                             <div class="col-sm-8">
-                                @Html.TextBoxFor(c => c.Code, "Enter category code", new { @class = "form-group", style = "width:100%" })
+                                @Html.TextBoxFor(c => c.Code, "Enter Product code", new { @class = "form-group", style = "width:100%" })
                                 @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                             </div>
 
@@ -39,12 +39,28 @@
                         <div class="row" style="padding: 0.5px">
                             <div class="col-sm-4">@Html.LabelFor(c => c.Name, null, new { @class = "form-group", color = "aquamarine" })</div>
                             <div class="col-sm-8">
-                                @Html.TextBoxFor(c => c.Name, "Enter category code", new { @class = "form-group", style = "width:100%" })
+                                @Html.TextBoxFor(c => c.Name, "Enter Product Name", new { @class = "form-group", style = "width:100%" })
                                 @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
                             </div>
 
                         </div>
                         <div class="row" style="padding: 0.5px">
+                            <div class="col-sm-4">@Html.LabelFor(c => c.ReorderLevel, null, new { @class = "form-group", color = "aquamarine" })</div>
+                            <div class="col-sm-8">
+                                @Html.TextBoxFor(c => c.ReorderLevel, "Enter Product ReorderLevel", new { @class = "form-group", style = "width:100%" })
+                                @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="row" style="padding: 0.5px">
+                            <div class="col-sm-4">@Html.LabelFor(c => c.Description, null, new { @class = "form-group", color = "aquamarine" })</div>
+                            <div class="col-sm-8">
+                                @Html.TextBoxFor(c => c.Description, "Enter Product Description", new { @class = "form-group", style = "width:100%" })
+                                @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="row" style="padding: 2px">
                             <div class="col-sm-4">
 
                                 <div class="col-md-12">
@@ -65,7 +81,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-sm-8"><input type="submit" name="Add" value="Add Category" /> </div>
+                            <div class="col-sm-8"><input type="submit" name="Add" value="Add Product" /> </div>
 
                         </div>
                     </div>
