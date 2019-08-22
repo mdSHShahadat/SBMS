@@ -190,6 +190,10 @@
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Customer\Search.cshtml" />
     <Content Include="Views\Customer\Show.cshtml" />
+    <Content Include="Views\Supplier\Add.cshtml" />
+    <Content Include="Views\Supplier\Edit.cshtml" />
+    <Content Include="Views\Supplier\Search.cshtml" />
+    <Content Include="Views\Supplier\Show.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -199,7 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Supplier\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SBMS.BLL\SBMS.BLL.csproj">

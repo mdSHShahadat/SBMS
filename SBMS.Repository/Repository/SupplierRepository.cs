@@ -29,6 +29,7 @@ namespace SBMS.Repository.Repository
         public bool Delete(Supplier supplier)
         {
             Supplier aSupplier = db.Suppliers.FirstOrDefault(c => c.Id == supplier.Id);
+            db.Suppliers.Remove(aSupplier);
             int status = db.SaveChanges();
             if (status > 0)
             {
