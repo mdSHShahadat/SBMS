@@ -1,0 +1,95 @@
+﻿@model SBMS.Models.CustomerVM
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+    <div id="customerSetup" class="container text-center">
+        <h3>Customer Entry Form</h3>
+        <br />
+        <div class="row">
+            <div class="col-md-12" style="background:azure">
+
+                <div class="row">
+                    <div class="col-sm-2" style="padding:1px">
+                        <a href="http://localhost:3706/customer/add"><input type="button" name="Add" value="Add Customer" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @using (Html.BeginForm("Search", "Customer"))
+        {
+
+
+
+            <div class="row">
+
+                <div class="col-md-12" style="background: black"></div>
+                <div class="col-md-12" style="background: aquamarine"></div>
+
+
+                <div class="col-md-12" style="background:azure">
+
+                    <div class="row" style="padding: 1%">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(c => c.Code, "Enter Customer code", new { @class = "form-group", style = "width:100%" })
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="submit" name="Search" value="Search" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="background: black"></div>
+            <div class="col-md-12" style="background: aquamarine"></div>
+
+
+
+
+        }
+
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align:center">Sl.</th>
+                    <th style="text-align:center">Customer Code</th>
+                    <th style="text-align:center">Name</th>
+                    <th style="text-align:center">Address</th>
+                    <th style="text-align:center">Email</th>
+                    <th style="text-align:center">Contact</th>
+                    <th style="text-align:center">Lolalty Point</th>
+                    <th style="text-align:center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 0;
+                    foreach (var c in Model.Customers)
+                    {
+                        <tr>
+                            <td style="text-align:center">@(i = i + 1)</td>
+                            <td>@c.Code</td>
+                            <td>@c.Name</td>
+                            <td>@c.Address</td>
+                            <td>@c.Email</td>
+                            <td>@c.Contact</td>
+                            <td>@c.LolaltyPoint</td>
+                            <td style="text-align:center">
+                                @Html.ActionLink("Edit", "Edit", "Customer", new { Id = c.Id }, null)
+                                |
+                                @Html.ActionLink("Delete", "Delete", "Customer", new { Id = c.Id }, null)
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <br />
+    </div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

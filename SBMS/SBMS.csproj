@@ -160,12 +160,16 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CategoryAddVM.cs" />
+    <Compile Include="Models\CustomerVM.cs" />
     <Compile Include="Models\ProductAddVM.cs" />
+    <Compile Include="Models\SupplierVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +186,10 @@
     <Content Include="Views\Product\Search.cshtml" />
     <Content Include="Views\Product\Show.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Customer\Add.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Search.cshtml" />
+    <Content Include="Views\Customer\Show.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -191,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Supplier\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SBMS.BLL\SBMS.BLL.csproj">

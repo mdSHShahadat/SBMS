@@ -27,6 +27,14 @@ namespace SBMS
 
                 conf.CreateMap<ProductAddVM, Product>();
                 conf.CreateMap<Product, ProductAddVM>();
+
+                conf.CreateMap<CustomerVM, Customer>();
+                conf.CreateMap<Customer, CustomerVM>();
+
+                conf.CreateMap<SupplierVM, Supplier>();
+                conf.CreateMap<Supplier, SupplierVM>();
+
+
             });
         }
     }

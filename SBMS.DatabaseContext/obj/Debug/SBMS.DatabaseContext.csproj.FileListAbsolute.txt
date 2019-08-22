@@ -62,3 +62,4 @@ D:\Shahadat_AT\22th August 2019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.Databas
 D:\Shahadat_AT\22th August 2019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.csproj.CopyComplete
 D:\Shahadat_AT\22th August 2019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.dll
 D:\Shahadat_AT\22th August 2019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.pdb
+D:\Shahadat_AT\22th August 2019\SBMS\SBMS.DatabaseContext\obj\Debug\SBMS.DatabaseContext.Migrations.CustomerSupplierModelAdded.resources
