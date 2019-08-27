@@ -1,10 +1,10 @@
-﻿using System;
+﻿using SBMS.Models.Models;
+using SBMS.Repository.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SBMS.Models.Models;
-using SBMS.Repository.Repository;
 
 namespace SBMS.BLL.BLL
 {
@@ -12,29 +12,34 @@ namespace SBMS.BLL.BLL
     {
         SupplierRepository _supplierRepository = new SupplierRepository();
 
-        public bool Add(Supplier supplier)
+        public bool AddSupplier(Supplier supplier)
         {
-            return _supplierRepository.Add(supplier);
+            return _supplierRepository.AddSupplier(supplier);
         }
 
-        public bool Delete(Supplier supplier)
+        public bool DeleteSupplier(Supplier supplier)
         {
-            return _supplierRepository.Delete(supplier);
+            return _supplierRepository.DeleteSupplier(supplier);
         }
 
-        public bool Update(Supplier supplier)
+        public bool UpdateSupplier(Supplier supplier)
         {
-            return _supplierRepository.Update(supplier);
-        }
-
-        public Supplier GetById(int supplierId)
-        {
-            return _supplierRepository.GetById(supplierId);
+            return _supplierRepository.UpdateSupplier(supplier);
         }
 
         public List<Supplier> GetAll()
         {
             return _supplierRepository.GetAll();
+        }
+
+        public Supplier GetByID(Supplier supplier)
+        {
+            return _supplierRepository.GetByID(supplier);
+        }
+
+        public bool IsCodeExist(string code)
+        {
+            return _supplierRepository.IsCodeExist(code);
         }
     }
 }

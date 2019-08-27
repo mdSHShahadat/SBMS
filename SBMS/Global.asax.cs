@@ -22,19 +22,17 @@ namespace SBMS
         {
             Mapper.Initialize(conf =>
             {
-                conf.CreateMap<CategoryAddVM, Category>();
-                conf.CreateMap<Category, CategoryAddVM>();
+                conf.CreateMap<CategoryViewModel, Category>();
+                conf.CreateMap<Category, CategoryViewModel>();
 
-                conf.CreateMap<ProductAddVM, Product>();
-                conf.CreateMap<Product, ProductAddVM>();
+                conf.CreateMap<ProductViewModel, Product>();
+                conf.CreateMap<Product, ProductViewModel>();
 
-                conf.CreateMap<CustomerVM, Customer>();
-                conf.CreateMap<Customer, CustomerVM>();
+                conf.CreateMap<CustomerViewModel, Customer>();
+                conf.CreateMap<Customer, CustomerViewModel>();
 
-                conf.CreateMap<SupplierVM, Supplier>();
-                conf.CreateMap<Supplier, SupplierVM>();
-
-
+                conf.CreateMap<SupplierViewModel, Supplier>();
+                conf.CreateMap<Supplier, SupplierViewModel>();
             });
         }
     }

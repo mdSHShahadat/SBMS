@@ -11,29 +11,41 @@ namespace SBMS.BLL.BLL
 {
     public class CategoryManager
     {
-        CategoryRepository _categoryRepositoy = new CategoryRepository();
-        Category _category = new Category();
-        public bool Add(Category category)
+        CategoryRepository _categoryRepository = new CategoryRepository();
+
+        public bool AddCategory(Category category)
         {
-            return _categoryRepositoy.Add(category);
+            return _categoryRepository.AddCategory(category);
         }
+
+        public bool DeleteCategory(Category category)
+        {
+            return _categoryRepository.DeleteCategory(category);
+        }
+
+        public bool UpdateCategory(Category category)
+        {
+            return _categoryRepository.UpdateCategory(category);
+        }
+
         public List<Category> GetAll()
         {
-            return _categoryRepositoy.GetAll();
-        }
-        public bool Delete(Category category)
-        {
-            return _categoryRepositoy.Delete(category);
-        }
-        public Category GetByID(int categoryId)
-        {
-
-            return _categoryRepositoy.GetByID(categoryId);
+            return _categoryRepository.GetAll();
         }
 
-        public bool Update(Category category)
+        public Category GetByID(Category category)
         {
-            return _categoryRepositoy.Update(category);
+            return _categoryRepository.GetByID(category);
+        }
+
+        public bool IsCodeExist(string code)
+        {
+            return _categoryRepository.IsCodeExist(code);
+        }
+
+        public bool IsNameExist(string name)
+        {
+            return _categoryRepository.IsNameExist(name);
         }
     }
 }

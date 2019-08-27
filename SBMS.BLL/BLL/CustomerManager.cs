@@ -1,41 +1,45 @@
-﻿using System;
+﻿using SBMS.Models.Models;
+using SBMS.Repository.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SBMS.Models.Models;
-using SBMS.Repository.Repository;
 
 namespace SBMS.BLL.BLL
 {
-    public class CustomerManager
+   public  class CustomerManager
     {
         CustomerRepository _customerRepository = new CustomerRepository();
 
-        public bool Add(Customer customer)
+        public bool AddCustomer(Customer customer)
         {
-            return _customerRepository.Add(customer);
+            return _customerRepository.AddCustomer(customer);
         }
 
-        public bool Delete(Customer customer)
+        public bool DeleteCustomer(Customer customer)
         {
-            return _customerRepository.Delete(customer);
+            return _customerRepository.DeleteCustomer(customer);
         }
 
-        public bool Update(Customer customer)
+        public bool UpdateCustomer(Customer customer)
         {
-            return _customerRepository.Update(customer);
-        }
-
-        public Customer GetById(int customerId)
-        {
-            return _customerRepository.GetById(customerId);
+            return _customerRepository.UpdateCustomer(customer);
         }
 
         public List<Customer> GetAll()
         {
             return _customerRepository.GetAll();
         }
-        
+
+        public Customer GetByID(Customer customer)
+        {
+            return _customerRepository.GetByID(customer);
+        }
+
+        public bool IsCodeExist(string code)
+        {
+            return _customerRepository.IsCodeExist(code);
+        }
     }
 }

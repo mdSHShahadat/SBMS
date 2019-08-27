@@ -9,14 +9,17 @@ using System.Threading.Tasks;
 
 namespace SBMS.Repository.Repository
 {
-    public class CustomerRepository
+   public  class CustomerRepository
     {
         SBMSDbContext db = new SBMSDbContext();
-        public bool Add(Customer customer)
+        public bool AddCustomer(Customer customer)
         {
+            int isExecuted = 0;
+
             db.Customers.Add(customer);
-            int ifRowAffected = db.SaveChanges();
-            if (ifRowAffected > 0)
+            isExecuted = db.SaveChanges();
+
+            if (isExecuted > 0)
             {
                 return true;
             }
@@ -24,12 +27,16 @@ namespace SBMS.Repository.Repository
             return false;
         }
 
-        public bool Delete(Customer customer)
+        public bool DeleteCustomer(Customer customer)
         {
+            int isExecuted = 0;
+
             Customer aCustomer = db.Customers.FirstOrDefault(c => c.Id == customer.Id);
+
             db.Customers.Remove(aCustomer);
-            int ifAffected = db.SaveChanges();
-            if (ifAffected > 0)
+            isExecuted = db.SaveChanges();
+
+            if (isExecuted > 0)
             {
                 return true;
             }
@@ -37,27 +44,37 @@ namespace SBMS.Repository.Repository
             return false;
         }
 
-        public bool Update(Customer customer)
+        public bool UpdateCustomer(Customer customer)
         {
+            int isExecuted = 0;
+
             db.Entry(customer).State = EntityState.Modified;
-            int ifAffected = db.SaveChanges();
-            if (ifAffected > 0)
+            isExecuted = db.SaveChanges();
+
+            if (isExecuted > 0)
             {
                 return true;
             }
 
             return false;
-        }
-
-        public Customer GetById(int customerId)
-        {
-            Customer customer = db.Customers.FirstOrDefault(c => c.Id == customerId);
-            return customer;
         }
 
         public List<Customer> GetAll()
         {
             return db.Customers.ToList();
+        }
+
+        public Customer GetByID(Customer customer)
+        {
+            Customer aCustomer = db.Customers.FirstOrDefault(c => c.Id== customer.Id);
+
+            return aCustomer;
+        }
+
+        public bool IsCodeExist(string code)
+        {
+            var isExist = db.Customers.FirstOrDefault(c => c.Code == code);
+            return isExist != null;
         }
     }
 }

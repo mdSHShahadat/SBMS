@@ -160,16 +160,15 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CategoryAddVM.cs" />
-    <Compile Include="Models\CustomerVM.cs" />
-    <Compile Include="Models\ProductAddVM.cs" />
-    <Compile Include="Models\SupplierVM.cs" />
+    <Compile Include="Models\CategoryViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\PurchaseViewModel.cs" />
+    <Compile Include="Models\SalesViewModel.cs" />
+    <Compile Include="Models\SupplierViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,20 +179,6 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\Category\Show.cshtml" />
-    <Content Include="Views\Category\Edit.cshtml" />
-    <Content Include="Views\Category\Search.cshtml" />
-    <Content Include="Views\Product\Add.cshtml" />
-    <Content Include="Views\Product\Search.cshtml" />
-    <Content Include="Views\Product\Show.cshtml" />
-    <Content Include="Views\Product\Edit.cshtml" />
-    <Content Include="Views\Customer\Add.cshtml" />
-    <Content Include="Views\Customer\Edit.cshtml" />
-    <Content Include="Views\Customer\Search.cshtml" />
-    <Content Include="Views\Customer\Show.cshtml" />
-    <Content Include="Views\Supplier\Add.cshtml" />
-    <Content Include="Views\Supplier\Edit.cshtml" />
-    <Content Include="Views\Supplier\Search.cshtml" />
-    <Content Include="Views\Supplier\Show.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

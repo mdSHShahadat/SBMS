@@ -53,9 +53,9 @@
     <Compile Include="Migrations\201908070618318_Initial.Designer.cs">
       <DependentUpon>201908070618318_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908220642027_CustomerSupplierModelAdded.cs" />
-    <Compile Include="Migrations\201908220642027_CustomerSupplierModelAdded.Designer.cs">
-      <DependentUpon>201908220642027_CustomerSupplierModelAdded.cs</DependentUpon>
+    <Compile Include="Migrations\201908270614246_AllDoneAboutLayerArchitecture.cs" />
+    <Compile Include="Migrations\201908270614246_AllDoneAboutLayerArchitecture.Designer.cs">
+      <DependentUpon>201908270614246_AllDoneAboutLayerArchitecture.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +74,8 @@
     <EmbeddedResource Include="Migrations\201908070618318_Initial.resx">
       <DependentUpon>201908070618318_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908220642027_CustomerSupplierModelAdded.resx">
-      <DependentUpon>201908220642027_CustomerSupplierModelAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908270614246_AllDoneAboutLayerArchitecture.resx">
+      <DependentUpon>201908270614246_AllDoneAboutLayerArchitecture.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

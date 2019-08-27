@@ -12,88 +12,158 @@ namespace SBMS.Controllers
 {
     public class CategoryController : Controller
     {
-        Category _category = new Category();
         CategoryManager _categoryManager = new CategoryManager();
+        private Category _category = new Category();
+        private CategoryViewModel _categoryViewModel = new CategoryViewModel();
+
+        // GET: Category
         [HttpGet]
         public ActionResult Add()
         {
+            
             return View();
+            
         }
+
         [HttpPost]
-        public ActionResult Add(CategoryAddVM categoryAddVM)
+        public ActionResult Add(CategoryViewModel categoryViewModel)
         {
-                        
-            var category = Mapper.Map<Category>(categoryAddVM);
             if (ModelState.IsValid)
             {
-                if (_categoryManager.Add(category))
+                // Code is already Exist
+                var isCodeExist = _categoryManager.IsCodeExist(categoryViewModel.Code);
+                if (isCodeExist)
                 {
-                    ViewBag.SuccessMsg="Saved!!!";   
+                    ModelState.AddModelError("CodeExist", "Code already exist");
+                    return this.View("Add");
+                }
+
+                // Name is already Exist
+                var isNameExist = _categoryManager.IsNameExist(categoryViewModel.Name);
+                if (isNameExist)
+                {
+                    ModelState.AddModelError("NameExist", "Name already exist");
+                    return this.View("Add");
+                }
+
+                Category category = new Category();
+                category = Mapper.Map<Category>(categoryViewModel);
+
+                if (_categoryManager.AddCategory(category))
+                {
+                    ViewBag.Message = "Saved";
+                    return RedirectToAction("Show", "Category");
                 }
                 else
                 {
-                    ViewBag.FailedMsg="Faield!!!";
+                    ViewBag.Message = "Failed";
                 }
-            }else
+            }
+            else
             {
-                ViewBag.ValidationMsg="Validation Failed!!!";
-            }           
-            return RedirectToAction("Show");
+                ViewBag.Message = "Validation Error";
+            }
+
+            return View();
         }
 
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            
+                _category.Id = id;
+                var category = _categoryManager.GetByID(_category);
+                _categoryViewModel = Mapper.Map<CategoryViewModel>(category);
+
+                return View(_categoryViewModel);
+            
+        }
+
+        [HttpPost]
+        public ActionResult Edit(CategoryViewModel categoryViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                // Code is already Exist
+                var isCodeExist = _categoryManager.IsCodeExist(categoryViewModel.Code);
+                if (isCodeExist)
+                {
+                    ModelState.AddModelError("CodeExist", "Code already exist");
+                    return this.View("Edit");
+                }
+
+                // Name is already Exist
+                var isNameExist = _categoryManager.IsNameExist(categoryViewModel.Name);
+                if (isNameExist)
+                {
+                    ModelState.AddModelError("NameExist", "Name already exist");
+                    return this.View("Edit");
+                }
+
+                Category category = new Category();
+                category = Mapper.Map<Category>(categoryViewModel);
+
+                if (_categoryManager.UpdateCategory(category))
+                {
+                    ViewBag.Message = "Updated";
+                    return RedirectToAction("Show", "Category");
+                }
+                else
+                {
+                    ViewBag.Message = "Failed";
+                }
+            }
+            else
+            {
+                ViewBag.Message = "Validation Error";
+            }
+
+            return View(categoryViewModel);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                _category.Id = id;
+
+                if (_categoryManager.DeleteCategory(_category))
+                {
+                    ViewBag.AlertMsg = "Delete Successfully";
+                }
+                return RedirectToAction("Show");
+            }
+            catch
+            {
+                return RedirectToAction("Show"); ;
+            }
+        }
+
+        [HttpGet]
         public ActionResult Show()
         {
-            CategoryAddVM categoryAddVm = new CategoryAddVM();
-            categoryAddVm.Categories = _categoryManager.GetAll();
-            return View(categoryAddVm) ;
-        }
-
-        public ActionResult Delete(CategoryAddVM categoryAddVM)
-        {
-            var category = Mapper.Map<Category>(categoryAddVM);
-            //category.Id = categoryAddVM.Id;
-
-            _categoryManager.Delete(category);
-
-            return RedirectToAction("Show");
-        }
-        [HttpGet]
-        public ActionResult Edit(int Id)
-        {
-            var category = _categoryManager.GetByID(Id);
-            var aCategoryAddVM = Mapper.Map<CategoryAddVM>(category);
-            return View(aCategoryAddVM);
-        }
-        [HttpPost]
-        public ActionResult Edit(CategoryAddVM categoryAddVM)
-        {
-            var category = Mapper.Map<Category>(categoryAddVM);
             
-            _categoryManager.Update(category);
-            return RedirectToAction("Show");
+                _categoryViewModel.Categories = _categoryManager.GetAll();
+
+                return View(_categoryViewModel);
+            
         }
-        public ActionResult Search()
-        {
-            CategoryAddVM categoryAddVm = new CategoryAddVM();
-            categoryAddVm.Categories = _categoryManager.GetAll();
-            return View(categoryAddVm);
-        }
+
         [HttpPost]
-        public ActionResult Search(CategoryAddVM categoryAddVM)
+        public ActionResult Show(CategoryViewModel categoryViewModel)
         {
-            var category = _categoryManager.GetAll();
-            if (categoryAddVM.Code != null)
-            {
-                category = category.Where(c => c.Code.ToLower().Contains(categoryAddVM.Code.ToLower())).ToList();
-            }
-            if(categoryAddVM.Name != null)
-            {
-                category = category.Where(c => c.Name.ToLower().Contains(categoryAddVM.Name.ToLower())).ToList();
-            }
-            categoryAddVM.Categories = category;
+            var categories = _categoryManager.GetAll();
 
-            return View(categoryAddVM);
+            if (categoryViewModel.Name != null)
+            {
+                Category category = new Category();
+                category = Mapper.Map<Category>(categoryViewModel);
+
+                categories = categories.Where(c => c.Name.ToLower().Contains(category.Name.ToLower())).ToList();
+            }
+
+            categoryViewModel.Categories = categories;
+            return View(categoryViewModel);
         }
-
     }
 }
