@@ -89,17 +89,17 @@ namespace SBMS.Controllers
             return View(purchaseViewModel);
         }
 
-        //public JsonResult GetProductHistory(int productId)
-        //{
-        //    ProductViewModel model = new ProductViewModel();
-        //    Product product = new Product();
-        //    product.Id = productId;
-        //    var aProduct = _productManager.GetByID(product);
-        //    string productCode = aProduct.Code;
+        public JsonResult GetProductHistory(int productId)
+        {
+            ProductViewModel model = new ProductViewModel();
+            Product product = new Product();
+            product.Id = productId;
+            var aProduct = _productManager.GetByID(product);
+            string productCode = aProduct.Code;
 
-        //    model = _purchaseManager.GetByPrevious(product);
-        //    model.Code = productCode;
-        //    return Json(model, JsonRequestBehavior.AllowGet);
-        //}
+            model = _purchaseManager.GetByPrevious(product);
+            model.Code = productCode;
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
     }
 }

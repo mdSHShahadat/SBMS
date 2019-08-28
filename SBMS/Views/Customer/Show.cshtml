@@ -19,79 +19,89 @@
     {
         <p class="form-inline active-cyan-4">
             @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "search-key", @placeholder = "Search..." }, onchange = "this.form.submit();" })
-            <button type="submit" class="btn-sr"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn-sr"><i class="fa fa-search">Search</i></button>
         </p>
     }
 
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th style="width: 5%">SL</th>
-                <th style="width: 10%">
-                    @Html.DisplayNameFor(model => model.Code)
-                </th>
-                <th style="width: 20%">
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th style="width: 15%">
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th style="width: 15%">
-                    @Html.DisplayNameFor(model => model.Contact)
-                </th>
-                <th style="width: 15%">
-                    @Html.DisplayNameFor(model => model.Address)
-                </th>
-                <th style="width: 8%">
-                    @Html.DisplayNameFor(model => model.LoyaltyPoint)
-                </th>
-                <th style="width: 10%">
-                    @Html.DisplayNameFor(model => model.Image)
-                </th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        @if (Model != null)
-        {
-            <tbody>
-                @{ int sl = 1;}
-                @foreach (var item in Model.Customers)
+    <div class="row">
+        <br />
+        <div class="col-md-12" style="background: black"></div>
+        <div class="col-md-12" style="background: aquamarine"></div>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th style="width: 5%">SL</th>
+                    <th style="width: 10%">
+                        @Html.DisplayNameFor(model => model.Code)
+                    </th>
+                    <th style="width: 20%">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th style="width: 15%">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th style="width: 15%">
+                        @Html.DisplayNameFor(model => model.Contact)
+                    </th>
+                    <th style="width: 15%">
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th style="width: 8%">
+                        @Html.DisplayNameFor(model => model.LoyaltyPoint)
+                    </th>
+                    <th style="width: 10%">
+                        @Html.DisplayNameFor(model => model.Image)
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @if (Model != null)
+            {
+                <tbody>
+                    @{ int sl = 1;}
+                    @foreach (var item in Model.Customers)
                 {
-                    <tr>
-                        <td>
-                            @(sl++)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Code)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Contact)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LoyaltyPoint)
-                        </td>
-                        <td>
-                            <img width="100" height="100" src="~/images/CustomerImages/@Html.DisplayFor(modelItem => item.Image)" alt="Image Not Available" class="img-circle" />
-                        </td>
-                        <td>
-                            <p class="btn btn-primary btn-sm admin-action-btn"><span class="fa fa-pencil-square-o admin-action-icon"></span>@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "admin-action" })</p>
+                        <tr>
+                            <td>
+                                @(sl++)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Code)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contact)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LoyaltyPoint)
+                            </td>
+                            <td>
+                                <img width="100" height="100" src="~/images/CustomerImages/@Html.DisplayFor(modelItem => item.Image)" alt="Image Not Available" class="img-circle" />
+                            </td>
+                            <td>
+                                <p class="btn btn-primary btn-sm admin-action-btn"><span class="fa fa-pencil-square-o admin-action-icon"></span>@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "admin-action" })</p>
 
 
-                        </td>
-                    </tr>
-                }
-            </tbody>
+                            </td>
+                        </tr>
                     }
-    </table>
+                </tbody>
+                        }
+        </table>
+
+        <div class="col-md-12" style="background: black"></div>
+        <div class="col-md-12" style="background: aquamarine"></div>
+    </div>
+   
 </div>
 
 

@@ -17,15 +17,15 @@ namespace SBMS.BLL.BLL
             return _salesRepository.Entry(sales);
         }
 
-        //public int GetByPurchaseQuantity(Product product)
-        //{
-        //    return _salesRepository.GetByPurchaseQuantity(product);
-        //}
+        public int GetByPurchaseQuantity(Product product)
+        {
+            return _salesRepository.GetByPurchaseQuantity(product);
+        }
 
-        //public int GetBySalesQuantity(Product product)
-        //{
-        //    return _salesRepository.GetBySalesQuantity(product);
-        //}
+        public int GetBySalesQuantity(Product product)
+        {
+            return _salesRepository.GetBySalesQuantity(product);
+        }
 
         public PurchaseDetails GetMRP(Product product)
         {

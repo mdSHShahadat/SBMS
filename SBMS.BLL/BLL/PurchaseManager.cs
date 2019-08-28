@@ -1,4 +1,5 @@
-﻿using SBMS.Models.Models;
+﻿using SBMS.Models;
+using SBMS.Models.Models;
 using SBMS.Repository.Repository;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,10 @@ namespace SBMS.BLL.BLL
             return _purchaseRepository.Entry(purchase);
         }
 
-        //public ProductViewModel GetByPrevious(Product product)
-        //{
-        //    return _purchaseRepository.GetByPrevious(product);
-        //}
+        public ProductViewModel GetByPrevious(Product product)
+        {
+            return _purchaseRepository.GetByPrevious(product);
+        }
 
         public bool IsInvoiceNoExist(string invoiceNo)
         {

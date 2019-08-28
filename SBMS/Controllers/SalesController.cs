@@ -89,19 +89,19 @@ namespace SBMS.Controllers
                 return Json(customer, JsonRequestBehavior.AllowGet);
             }
 
-        //public JsonResult GetAvailableQuantity(int productId)
-        //{
-        //    PurchaseViewModel purchaseModel = new PurchaseViewModel();
-        //    SalesViewModel salesModel = new SalesViewModel();
-        //    Product product = new Product();
-        //    product.Id = productId;
-        //    purchaseModel.Quantity = Convert.ToInt32(_salesManager.GetByPurchaseQuantity(product));
-        //    salesModel.Quantity = Convert.ToInt32(_salesManager.GetBySalesQuantity(product));
+        public JsonResult GetAvailableQuantity(int productId)
+        {
+            PurchaseViewModel purchaseModel = new PurchaseViewModel();
+            SalesViewModel salesModel = new SalesViewModel();
+            Product product = new Product();
+            product.Id = productId;
+            purchaseModel.Quantity = Convert.ToInt32(_salesManager.GetByPurchaseQuantity(product));
+            salesModel.Quantity = Convert.ToInt32(_salesManager.GetBySalesQuantity(product));
 
-        //    salesModel.AvailableQuantity = purchaseModel.Quantity - salesModel.Quantity;
+            salesModel.AvailableQuantity = purchaseModel.Quantity - salesModel.Quantity;
 
-        //    return Json(salesModel, JsonRequestBehavior.AllowGet);
-        //}
+            return Json(salesModel, JsonRequestBehavior.AllowGet);
+        }
 
         public JsonResult GetMRP(int productId)
             {

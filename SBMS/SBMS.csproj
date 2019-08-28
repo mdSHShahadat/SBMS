@@ -197,6 +197,7 @@
     <Content Include="Views\Supplier\Edit.cshtml" />
     <Content Include="Views\Supplier\Show.cshtml" />
     <Content Include="Views\Purchase\Entry.cshtml" />
+    <Content Include="Views\Sales\Entry.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -206,7 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Sales\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SBMS.BLL\SBMS.BLL.csproj">

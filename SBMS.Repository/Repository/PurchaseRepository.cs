@@ -27,27 +27,27 @@ namespace SBMS.Repository.Repository
             return false;
         }
 
-        //public Product GetByPrevious(Product product)
-        //{
-        //    ProductViewModel aProduct = new ProductViewModel();
-        //    var products = db.PurchaseDetails.Where(c => c.ProductId == product.Id).ToList();
-        //    if (products.Count > 0)
-        //    {
-        //        int count = 0;
-        //        int latestList = products.Count;
-        //        foreach (var pro in products)
-        //        {
-        //            count++;
-        //            if (latestList == count)
-        //            {
-        //                aProduct.ProductId = pro.ProductId;
-        //                aProduct.PreviousCostPrice = pro.UnitPrice;
-        //                aProduct.PreviousMRP = pro.MRP;
-        //            }
-        //        }
-        //    }
-        //    return aProduct;
-        //}
+        public ProductViewModel GetByPrevious(Product product)
+        {
+            ProductViewModel aProduct = new ProductViewModel();
+            var products = db.PurchaseDetails.Where(c => c.ProductId == product.Id).ToList();
+            if (products.Count > 0)
+            {
+                int count = 0;
+                int latestList = products.Count;
+                foreach (var pro in products)
+                {
+                    count++;
+                    if (latestList == count)
+                    {
+                        aProduct.ProductId = pro.ProductId;
+                        aProduct.PreviousCostPrice = pro.UnitPrice;
+                        aProduct.PreviousMRP = pro.MRP;
+                    }
+                }
+            }
+            return aProduct;
+        }
 
         public bool IsInvoiceNoExist(string invoiceNo)
         {
