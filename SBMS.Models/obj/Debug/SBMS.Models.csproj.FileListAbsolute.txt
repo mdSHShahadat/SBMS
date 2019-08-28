@@ -20,3 +20,9 @@ C:\Users\MdShahadat\Desktop\WorkStation\SBMS\SBMS.Models\bin\Debug\SBMS.Models.p
 C:\Users\MdShahadat\Desktop\WorkStation\SBMS\SBMS.Models\obj\Debug\SBMS.Models.csprojResolveAssemblyReference.cache
 C:\Users\MdShahadat\Desktop\WorkStation\SBMS\SBMS.Models\obj\Debug\SBMS.Models.dll
 C:\Users\MdShahadat\Desktop\WorkStation\SBMS\SBMS.Models\obj\Debug\SBMS.Models.pdb
+D:\EN190512\WorkRepository\28082019\SBMS\SBMS.Models\bin\Debug\SBMS.Models.dll
+D:\EN190512\WorkRepository\28082019\SBMS\SBMS.Models\bin\Debug\SBMS.Models.pdb
+D:\EN190512\WorkRepository\28082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.csprojAssemblyReference.cache
+D:\EN190512\WorkRepository\28082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.csproj.CoreCompileInputs.cache
+D:\EN190512\WorkRepository\28082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.dll
+D:\EN190512\WorkRepository\28082019\SBMS\SBMS.Models\obj\Debug\SBMS.Models.pdb

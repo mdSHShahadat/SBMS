@@ -27,7 +27,7 @@ namespace SBMS.Repository.Repository
             return false;
         }
 
-        //public ProductViewModel GetByPrevious(Product product)
+        //public Product GetByPrevious(Product product)
         //{
         //    ProductViewModel aProduct = new ProductViewModel();
         //    var products = db.PurchaseDetails.Where(c => c.ProductId == product.Id).ToList();

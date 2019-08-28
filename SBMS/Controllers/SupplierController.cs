@@ -40,10 +40,10 @@ namespace SBMS.Controllers
                         return this.View("Add");
                     }
 
-                    string fileName = Path.GetFileNameWithoutExtension(supplierViewModel.ImageFile.FileName);
-                    supplierViewModel.Image = supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
-                    fileName = "~/images/SupplierLogo/" + supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
-                    supplierViewModel.ImageFile.SaveAs(Server.MapPath(fileName));
+                    //string fileName = Path.GetFileNameWithoutExtension(supplierViewModel.ImageFile.FileName);
+                    //supplierViewModel.Image = supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
+                    //fileName = "~/images/SupplierLogo/" + supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
+                    //supplierViewModel.ImageFile.SaveAs(Server.MapPath(fileName));
 
                     Supplier supplier = new Supplier();
                     supplier = Mapper.Map<Supplier>(supplierViewModel);
@@ -90,10 +90,10 @@ namespace SBMS.Controllers
                     //    return this.View("Add");
                     //}
 
-                    string fileName = Path.GetFileNameWithoutExtension(supplierViewModel.ImageFile.FileName);
-                    supplierViewModel.Image = supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
-                    fileName = "~/images/SupplierLogo/" + supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
-                    supplierViewModel.ImageFile.SaveAs(Server.MapPath(fileName));
+                    //string fileName = Path.GetFileNameWithoutExtension(supplierViewModel.ImageFile.FileName);
+                    //supplierViewModel.Image = supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
+                    //fileName = "~/images/SupplierLogo/" + supplierViewModel.Code + fileName + System.IO.Path.GetExtension(supplierViewModel.ImageFile.FileName);
+                    //supplierViewModel.ImageFile.SaveAs(Server.MapPath(fileName));
 
                     Supplier supplier = new Supplier();
                     supplier = Mapper.Map<Supplier>(supplierViewModel);
@@ -136,16 +136,11 @@ namespace SBMS.Controllers
             [HttpGet]
             public ActionResult Show()
             {
-                if (Request.Cookies.Get("user") != null)
-                {
+                
                     _supplierViewModel.Suppliers = _supplierManager.GetAll();
 
                     return View(_supplierViewModel);
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Home");
-                }
+                
             }
 
             [HttpPost]

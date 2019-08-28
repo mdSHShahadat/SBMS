@@ -20,8 +20,7 @@ namespace SBMS.Controllers
         [HttpGet]
         public ActionResult Entry()
         {
-            if (Request.Cookies.Get("user") != null)
-            {
+            
                 PurchaseViewModel purchaseViewModel = new PurchaseViewModel();
                 purchaseViewModel.SupplierSelectListItems = _supplierManager.GetAll().Select(c => new SelectListItem()
                 {
@@ -36,11 +35,7 @@ namespace SBMS.Controllers
                 });
 
                 return View(purchaseViewModel);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
+            
         }
 
         [HttpPost]

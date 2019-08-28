@@ -22,8 +22,7 @@ namespace SBMS.Controllers
             [HttpGet]
             public ActionResult Entry()
             {
-                if (Request.Cookies.Get("user") != null)
-                {
+                
                     SalesViewModel salesViewModel = new SalesViewModel();
                     salesViewModel.CustomerSelectListItems = _customerManager.GetAll().Select(c => new SelectListItem()
                     {
@@ -38,11 +37,7 @@ namespace SBMS.Controllers
                     });
 
                     return View(salesViewModel);
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Home");
-                }
+                
             }
 
             [HttpPost]
@@ -94,21 +89,21 @@ namespace SBMS.Controllers
                 return Json(customer, JsonRequestBehavior.AllowGet);
             }
 
-            //public JsonResult GetAvailableQuantity(int productId)
-            //{
-            //    PurchaseViewModel purchaseModel = new PurchaseViewModel();
-            //    SalesViewModel salesModel = new SalesViewModel();
-            //    Product product = new Product();
-            //    product.Id = productId;
-            //    purchaseModel.Quantity = Convert.ToInt32(_salesManager.GetByPurchaseQuantity(product));
-            //    salesModel.Quantity = Convert.ToInt32(_salesManager.GetBySalesQuantity(product));
+        //public JsonResult GetAvailableQuantity(int productId)
+        //{
+        //    PurchaseViewModel purchaseModel = new PurchaseViewModel();
+        //    SalesViewModel salesModel = new SalesViewModel();
+        //    Product product = new Product();
+        //    product.Id = productId;
+        //    purchaseModel.Quantity = Convert.ToInt32(_salesManager.GetByPurchaseQuantity(product));
+        //    salesModel.Quantity = Convert.ToInt32(_salesManager.GetBySalesQuantity(product));
 
-            //    salesModel.AvailableQuantity = purchaseModel.Quantity - salesModel.Quantity;
+        //    salesModel.AvailableQuantity = purchaseModel.Quantity - salesModel.Quantity;
 
-            //    return Json(salesModel, JsonRequestBehavior.AllowGet);
-            //}
+        //    return Json(salesModel, JsonRequestBehavior.AllowGet);
+        //}
 
-            public JsonResult GetMRP(int productId)
+        public JsonResult GetMRP(int productId)
             {
                 Product product = new Product();
                 product.Id = productId;
