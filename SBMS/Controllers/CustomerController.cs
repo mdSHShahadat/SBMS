@@ -39,10 +39,10 @@ namespace SBMS.Controllers
                     return this.View("Add");
                 }
 
-                string fileName = Path.GetFileNameWithoutExtension(customerViewModel.ImageFile.FileName);
-                customerViewModel.Image = customerViewModel.Code + fileName + System.IO.Path.GetExtension(customerViewModel.ImageFile.FileName);
-                fileName = "~/images/CustomerImages/" + customerViewModel.Code + fileName + System.IO.Path.GetExtension(customerViewModel.ImageFile.FileName);
-                customerViewModel.ImageFile.SaveAs(Server.MapPath(fileName));
+                //string fileName = Path.GetFileNameWithoutExtension(customerViewModel.ImageFile.FileName);
+                //customerViewModel.Image = customerViewModel.Code + fileName + System.IO.Path.GetExtension(customerViewModel.ImageFile.FileName);
+                //fileName = "~/images/CustomerImages/" + customerViewModel.Code + fileName + System.IO.Path.GetExtension(customerViewModel.ImageFile.FileName);
+                //customerViewModel.ImageFile.SaveAs(Server.MapPath(fileName));
 
                 Customer customer = new Customer();
                 customer = Mapper.Map<Customer>(customerViewModel);

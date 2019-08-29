@@ -3,13 +3,18 @@
     ViewBag.Title = "Add";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div id="supplierSetup" class="container text-center">
-    <h3>Supplier Entry From</h3>
+    <div id="supplierSetup" class="container text-center">
+        <h3>Supplier Entry From</h3>
 
 
-    @using (Html.BeginForm("Add", "Supplier"))
-    {
-      
+        @using (Html.BeginForm("Add", "Supplier"))
+        {
+
+
+    <div class="row">
+        <br />
+        <div class="col-md-12" style="background: black"></div>
+        <div class="col-md-12" style="background: aquamarine"></div>
 
         <div class="form-horizontal">
             <h4 class="h-position">Add Supplier</h4>
@@ -78,27 +83,34 @@
                 </div>
             </div>
         </div>
-    }
 
-    <div>
-        <span class="fa fa-undo admin-back-icon"></span>@Html.ActionLink("Show All Supplier", "Show")
+        <div class="col-md-12" style="background: black"></div>
+        <div class="col-md-12" style="background: aquamarine"></div>
+
     </div>
-</div>
 
-    @section Scripts{
-        <script src="~/Scripts/jquery.validate.min.js"></script>
-        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-        <center>
-            @if (ViewBag.Message != null)
-            {
-                <script type="text/javascript">
+        
+        }
+
+        <div>
+            <span class="fa fa-undo admin-back-icon"></span>@Html.ActionLink("Show All Supplier", "Show")
+        </div>
+    </div>
+
+            @section Scripts{
+                <script src="~/Scripts/jquery.validate.min.js"></script>
+                <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+                <center>
+                    @if (ViewBag.Message != null)
+                    {
+                        <script type="text/javascript">
             window.onload = function () {
                 alert("@ViewBag.Message");
             };
-                </script>
+                        </script>
+                    }
+                </center>
             }
-        </center>
-    }
 
 
 
