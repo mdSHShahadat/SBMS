@@ -33,6 +33,9 @@ namespace SBMS
 
                 conf.CreateMap<SupplierViewModel, Supplier>();
                 conf.CreateMap<Supplier, SupplierViewModel>();
+
+                conf.CreateMap<ProductViewModel, ProductVM>();
+                conf.CreateMap<ProductVM, ProductViewModel>();
             });
         }
     }
